@@ -1,7 +1,8 @@
-import React from "react";
 import "./App.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import VideoCarousel from "./VideoCarousel";
+import videos from "./video.json";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
         <section className="relative">
           <div className="relative pt-24 lg:pt-28">
             <div className="mx-auto px-6 max-w-7xl md:px-12">
+              <div className="text-center">
+                <VideoCarousel videos={ videos } />
+              </div>
               <div className="text-center sm:mx-auto sm:w-10/12 lg:mr-auto lg:mt-0 lg:w-4/5">
                 <h1 className="mt-8 text-wrap text-4xl md:text-5xl font-semibold text-gray-950 dark:text-white xl:text-5xl xl:[line-height:1.125]">
                   Engage Next billion users of Ethereum <br /> in their
