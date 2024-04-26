@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@tailus/themer": "^0.0.5",
-    "@testing-library/jest-dom": "^5.17.0",
+
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
@@ -43,12 +43,16 @@
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "@craco/types": "^7.1.0",
+    "@jest/globals": "29.7.0",
     "@types/node": "^16.18.96",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.2",
     "eslint-config-react-app": "^7.0.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "ts-jest": "^29.1.2"
   }
 }
