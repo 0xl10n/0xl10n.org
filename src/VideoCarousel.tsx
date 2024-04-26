@@ -31,7 +31,7 @@ export default function VideoCarousel({ videos }: VideoCarouselProps) {
       <div className="carousel carousel-center w-full h-80 p-2 space-x-2 rounded-box">
         {videos.map((video: VideoData, i: number) => (
           <div key={video.id} id={`slide${i + 1}`} className="carousel-item p-2 relative">
-            <a href={ `https://www.youtube.com/watch?v=${i}` }><img className="w-full h-full rounded-box" src={ `https://img.youtube.com/vi/${video.id}/sddefault.jpg` } alt={ video.title } />
+            <a href={ `https://www.youtube.com/watch?v=${video.id}` }><img className="w-full h-full rounded-box" src={ `https://img.youtube.com/vi/${video.id}/sddefault.jpg` } alt={ video.title } />
             </a>
             <div className="absolute top-5 left-5 w-full text-white text-left drop-shadow">
               <p>{ video.title }</p>
