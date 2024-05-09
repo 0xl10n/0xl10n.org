@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/typescript-config/react-app.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "incremental": true
+  },
+  "include": [
+    "src"
+  ]
+}
