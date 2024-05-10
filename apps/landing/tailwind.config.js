@@ -9,8 +9,8 @@ module.exports = {
   safelist: ["isToggled"],
   theme: {
     fontFamily: {
-      sans: ['Geist', 'Inter', ...defaultTheme.fontFamily.sans],
-      mono : ['GeistMono', 'fira-code', ...defaultTheme.fontFamily.mono],
+      sans: ["Geist", "Inter", ...defaultTheme.fontFamily.sans],
+      mono: ["GeistMono", "fira-code", ...defaultTheme.fontFamily.mono],
     },
     keyframes: {
       loop: {
@@ -19,7 +19,6 @@ module.exports = {
         },
       },
     },
-
   },
   plugins: [
     themer({
@@ -40,5 +39,6 @@ module.exports = {
   ],
   daisyui: {
     themes: ["bumblebee"],
+    logs: false,
   },
-}
+};

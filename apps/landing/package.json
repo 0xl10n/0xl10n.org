@@ -7,7 +7,7 @@
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint . --max-warnings 0",
-    "format": "prettier --write"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@tailus/themer": "^0.0.5",
@@ -46,14 +46,15 @@
     "@jest/globals": "29.7.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@testing-library/jest-dom": "^5.17.0",
     "@types/node": "^16.18.96",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.2",
     "eslint-config-react-app": "^7.0.1",
-    "@testing-library/jest-dom": "^5.17.0",
     "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.3",
     "ts-jest": "^29.1.2"
   }
