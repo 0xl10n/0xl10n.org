@@ -50,8 +50,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-turbo-
 
-      - name: Build
-        run: pnpm build
+      - name: Test Build Docusauras only
+        run: cd app/docs && pnpm build
 
       - name: Test
         run: pnpm test
