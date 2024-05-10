@@ -2,7 +2,7 @@
   "name": "0xl10n.org",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo run build --cache-dir=.turbo",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
