@@ -1,8 +1,10 @@
 import "./App.css";
 import Header from "./Header";
+import Feature from "./Feature";
 import Footer from "./Footer";
 import VideoCarousel from "./VideoCarousel";
 import videos from "./video.json";
+import Workflow from "./Workflow"
 
 function App() {
   return (
@@ -71,6 +73,8 @@ function App() {
             </div>
           </div>
         </section>
+        <Feature />
+        <Workflow />
         <section>
           <div className="pt-36">
             <div className="mx-auto px-6 max-w-6xl text-gray-500">
@@ -139,39 +143,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="how-it-works">
-          <div className="pt-36">
-            <div className="mx-auto px-6 max-w-6xl text-gray-500">
-              <div className="text-center">
-                <h2 className="text-3xl text-gray-950 dark:text-white font-semibold">
-                  How it works?
-                </h2>
-                <p className="mt-6 text-gray-700 dark:text-gray-300">
-                  A <b>protocol of reputation</b> system-based cryptoecon
-                  mechanisms <br />
-                  with decentralized toolings and computer power{" "}
-                  <b>enabling community and AI pipelines</b> <br />
-                  to support localization across software and content in the
-                  Ethereum ecosystems
-                </p>
-                <p>
-                  <a href="https://docs.google.com/presentation/d/1xtGcFLisc06wT81VOYeJTgy9Vxp6hP9uyBX7rRj7-64/edit#slide=id.g85cf8b5f36_0_6059">
-                    Check out our latest presentation.
-                  </a>
-                </p>
-              </div>
-              <div className="mt-12 relative h-fit sm:mx-auto sm:px-0 -mx-6 px-6 overflow-x-auto">
-                <div className="flex">
-                  <img
-                    className="object-contain"
-                    src="/assets/explanation.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+       
         <section>
           <div className="pt-36 pb-36">
             <div className="mx-auto px-6 max-w-6xl text-gray-500">

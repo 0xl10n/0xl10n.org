@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import themer from "@tailus/themer";
+import daisyui from "daisyui";
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -38,6 +39,6 @@ module.exports = {
     require("daisyui"),
   ],
   daisyui: {
-    themes: ["light"],
+    themes: ["bumblebee"],
   },
 }
