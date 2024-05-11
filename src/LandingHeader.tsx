@@ -1,13 +1,13 @@
-export default function Header() {
+import LogoBrand from "./LogoBrand"
+
+export default function LandingHeader() {
   return (
     <header>
       <nav className="fixed overflow-hidden z-20 w-full  dark:shadow-md rounded-b-lg  backdrop-blur-2xl">
         <div className="px-6 m-auto max-w-6xl 2xl:px-0">
           <div className="flex flex-wrap items-center justify-between py-2 sm:py-4">
             <div className="w-full items-center flex justify-between lg:w-auto">
-              <a href="/" aria-label="logo">
-                Ethereum Localization Service
-              </a>
+              <LogoBrand />
               <div className="flex lg:hidden">
                 <button
                   aria-label="humburger"
@@ -63,3 +63,4 @@ export default function Header() {
     </header>
   );
 }
+

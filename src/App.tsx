@@ -1,5 +1,5 @@
 import "./App.css";
-import Header from "./Header";
+import Header from "./LandingHeader";
 import Footer from "./Footer";
 import VideoCarousel from "./VideoCarousel";
 import videos from "./video.json";

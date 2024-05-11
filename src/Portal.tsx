@@ -1,7 +1,14 @@
 import React from 'react';
 
 import { usePrivy, getAccessToken } from '@privy-io/react-auth';
-import Header from './Header';
+import Header from './LandingHeader';
+import ProfileCard from './ProfileCard';
+import NavBar from './NavBar';
+import RepositoryList from './RepositoryList';
+import DrawerLayout from './DrawerLayout';
+import Menu from './Menu';
+import { Outlet } from 'react-router-dom';
+import Footer from './Footer';
 
 function Profile() {
     const { ready, authenticated, login, user } = usePrivy();
@@ -34,18 +41,17 @@ function Profile() {
 
 function Portal() {
     return (
-        <div>
-            <Header />
-            <div className="flex items-center content-center">
-                <div className="mt-12">
-                    <h1>Portal</h1>
-                    <div>
-                        <Profile />
-                    </div>
-                </div>
+        <DrawerLayout menu={<Menu />}>
+            <div>
+                <NavBar />
+                <div className="container mx-auto">
+                    <Outlet />
 
+
+                </div>
+                <Footer />
             </div>
-        </div>
+        </DrawerLayout>
     )
 }
 

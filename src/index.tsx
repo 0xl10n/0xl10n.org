@@ -13,6 +13,8 @@ import {
 import Portal from './Portal';
 
 import { PrivyProvider } from '@privy-io/react-auth';
+import { RepositoryPage } from './RepositoryPage';
+import { AttestorPage } from './AttestorPage';
 
 
 const router = createBrowserRouter([
@@ -21,7 +23,18 @@ const router = createBrowserRouter([
     element: (
       <Portal />
     ),
+    children: [
+      {
+        path: "/portal/attestors",
+        element: <AttestorPage />,
+      },
+      {
+        path: "repositories",
+        element: <RepositoryPage />,
+      }
+    ]
   },
+
   {
     path: "/",
     element: <App />,

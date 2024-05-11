@@ -1,5 +1,6 @@
 export default function Footer() {
   return (
+
     <footer className="rounded-xl border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
       <div className="max-w-6xl mx-auto space-y-16 px-6 py-16 text-gray-600 2xl:px-0">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-8 border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
@@ -63,3 +64,20 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+// <footer className="footer p-10 bg-neutral text-neutral-content">
+//   <nav>
+//       <h6 className="footer-title">Company</h6>
+//       <a className="link link-hover">About us</a>
+//       <a className="link link-hover">Contact</a>
+//       {/* <a className="link link-hover">Jobs</a> */}
+//       <a className="link link-hover">Press kit</a>
+//   </nav>
+//   <nav>
+//       <h6 className="footer-title">Legal</h6>
+//       <a className="link link-hover">Terms of use</a>
+//       <a className="link link-hover">Privacy policy</a>
+//       {/* <a className="link link-hover">Cookie policy</a> */}
+//   </nav>
+// </footer>

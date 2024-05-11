@@ -40,8 +40,8 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        dark: {
-          ...require("daisyui/src/theming/themes")["dark"],
+        night: {
+          ...require("daisyui/src/theming/themes")["night"],
 
           secondary: "#FF9E7A",
           "base-content": "white",
