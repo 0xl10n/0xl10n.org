@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Geist', 'Inter', ...defaultTheme.fontFamily.sans],
-      mono : ['GeistMono', 'fira-code', ...defaultTheme.fontFamily.mono],
+      mono: ['GeistMono', 'fira-code', ...defaultTheme.fontFamily.mono],
     },
     keyframes: {
       loop: {
@@ -38,6 +38,16 @@ module.exports = {
     require("daisyui"),
   ],
   daisyui: {
-    themes: ["light"],
+    themes: [
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+
+          secondary: "#FF9E7A",
+          "base-content": "white",
+          "primary": "#345C72"
+        },
+      },
+    ],
   },
 }
