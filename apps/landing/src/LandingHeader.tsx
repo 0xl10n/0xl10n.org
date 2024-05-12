@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LogoBrand from "./LogoBrand";
 
+
 export default function LandingHeader() {
   return (
     <header>
