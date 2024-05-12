@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LogoBrand from "./LogoBrand";
 
 export default function LandingHeader() {
@@ -38,6 +39,11 @@ export default function LandingHeader() {
                       <span>Product</span>
                     </a>
                   </li> */}
+                  <li>
+                    <Link to="/docs/intro" className="justify-between">
+                      Docs
+                    </Link>
+                  </li>
                   <li>
                     <a
                       href="#subscribe-form"
