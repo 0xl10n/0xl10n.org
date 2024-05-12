@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "turbo run build --cache-dir=.turbo",
+    "build": "DISABLE_ESLINT_PLUGIN='true' turbo run build --cache-dir=.turbo",
     "test": "turbo run test --cache-dir=.turbo",
     "dev": "turbo dev",
     "lint": "turbo lint",

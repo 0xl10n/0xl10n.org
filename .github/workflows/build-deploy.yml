@@ -9,7 +9,8 @@ jobs:
     name: Build and Test
     timeout-minutes: 10
     runs-on: ubuntu-latest
-
+    env:
+      REACT_APP_PRIVY_APP_ID: clv8gazq204exi1o8ryjhe3xw
     steps:
       - name: Check out code
         uses: actions/checkout@v4
