@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 const esmModules = [
     "@rainbow-me",
     "@spruceid",
@@ -7,6 +9,15 @@ const esmModules = [
 ];
 
 module.exports = {
+    webpack: {
+        plugins: {
+            add: [
+                new webpack.ProvidePlugin({
+                    Buffer: ['buffer', 'Buffer'],
+                }),
+            ],
+        },
+    },
     jest: {
         configure: () => ({
             preset: "ts-jest/presets/js-with-ts",

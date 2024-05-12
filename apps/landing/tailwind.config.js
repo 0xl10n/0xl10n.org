@@ -38,7 +38,20 @@ module.exports = {
     require("daisyui"),
   ],
   daisyui: {
-    themes: ["bumblebee"],
+    themes: [
+      // "emerald",
+      {
+        night: {
+          ...require("daisyui/src/theming/themes")["night"],
+          // primary is #62baf2
+          "base-content": "white",
+          // secondary: "#FF9E7A",
+          // "primary": "#345C72"
+          // "primary": "#497af3",
+          "primary-content": "white"
+        },
+      },
+    ],
     logs: false,
   },
 };

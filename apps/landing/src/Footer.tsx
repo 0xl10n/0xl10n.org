@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="rounded-xl border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
-      <div className="max-w-6xl mx-auto space-y-16 px-6 py-16 text-gray-600 2xl:px-0">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-8 border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
+    <footer className="">
+      <div className="mx-auto max-w-6xl space-y-16 px-6 py-16 text-gray-600 2xl:px-0">
+        <div className="dark:border-[--ui-dark-border-color] flex flex-wrap items-center justify-between gap-4 border-b border-[--ui-light-border-color] pb-8">
           <a href="/" aria-label="logo">
             © 2024 Ethereum Localization Service
           </a>
@@ -11,7 +11,7 @@ export default function Footer() {
               href="https://twitter.com/0xl10n"
               target="blank"
               aria-label="twitter"
-              className="size-8 flex *:m-auto rounded-[--btn-border-radius] text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500"
+              className="dark:text-gray-400 dark:hover:text-primary-500 flex size-8 rounded-[--btn-border-radius] text-gray-600 *:m-auto hover:text-primary-600"
             >
               <svg
                 className="size-5"
@@ -30,7 +30,7 @@ export default function Footer() {
               href="https://t.me/+jh97fLVbCSkwMTE1"
               target="blank"
               aria-label="medium"
-              className="size-8 flex *:m-auto rounded-[--btn-border-radius] text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500"
+              className="dark:text-gray-400 dark:hover:text-primary-500 flex size-8 rounded-[--btn-border-radius] text-gray-600 *:m-auto hover:text-primary-600"
             >
               <svg
                 className="size-5"
@@ -63,3 +63,19 @@ export default function Footer() {
     </footer>
   );
 }
+
+// <footer className="footer p-10 bg-neutral text-neutral-content">
+//   <nav>
+//       <h6 className="footer-title">Company</h6>
+//       <a className="link link-hover">About us</a>
+//       <a className="link link-hover">Contact</a>
+//       {/* <a className="link link-hover">Jobs</a> */}
+//       <a className="link link-hover">Press kit</a>
+//   </nav>
+//   <nav>
+//       <h6 className="footer-title">Legal</h6>
+//       <a className="link link-hover">Terms of use</a>
+//       <a className="link link-hover">Privacy policy</a>
+//       {/* <a className="link link-hover">Cookie policy</a> */}
+//   </nav>
+// </footer>
