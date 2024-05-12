@@ -1,5 +1,3 @@
 export const ContentList = () => {
-    return (<div>
-        content
-    </div>)
-}
+  return <div>content</div>;
+};

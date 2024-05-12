@@ -1,4 +1,2 @@
 // TODO model after nestjs layout
-export const Layout = () => {
-
-}
+export const Layout = () => {};
