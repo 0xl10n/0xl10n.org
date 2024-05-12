@@ -43,7 +43,7 @@ const RepositoryList = () => {
     <div>
       {REPO_DATA.map((repo, i) => (
         <div className="mb-4">
-          <RepositoryCard repo={repo} isChecked={i == 0} />
+          <RepositoryCard repo={repo} isChecked={i === 0} />
         </div>
       ))}
     </div>

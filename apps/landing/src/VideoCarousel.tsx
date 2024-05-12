@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export interface VideoData {
   id: string;
   title: string;

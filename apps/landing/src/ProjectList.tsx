@@ -51,7 +51,7 @@ const ProjectList = () => {
     <div>
       {PROJECT_DATA.map((project, i) => (
         <div className="mb-4">
-          <ProjectCard project={project} isChecked={i == 0} />
+          <ProjectCard project={project} isChecked={i === 0} />
         </div>
       ))}
     </div>
