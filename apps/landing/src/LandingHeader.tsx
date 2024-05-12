@@ -30,14 +30,14 @@ export default function LandingHeader() {
             <div className="w-full h-0 lg:w-fit flex-wrap justify-end items-center space-y-8 lg:space-y-0 lg:flex lg:h-fit md:flex-nowrap">
               <div className="mt-6 md:-ml-4 lg:pr-4 lg:mt-0">
                 <ul className="space-y-6 tracking-wide text-base lg:text-sm lg:flex lg:space-y-0">
-                  <li>
+                  {/* <li>
                     <a
                       href="#how-it-works"
                       className="block md:px-4 transition hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       <span>Product</span>
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
                       href="#subscribe-form"
@@ -48,7 +48,7 @@ export default function LandingHeader() {
                   </li>
                   <li>
                     <a
-                      href="/portal"
+                      href="/portal/translate"
                       className="block md:px-4 transition hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       <span>Portal</span>

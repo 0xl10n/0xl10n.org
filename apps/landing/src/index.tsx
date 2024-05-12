@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -13,9 +12,10 @@ import {
 import Portal from './Portal';
 
 import { PrivyProvider } from '@privy-io/react-auth';
-import { RepositoryPage } from './RepositoryPage';
-import { AttestorPage } from './AttestorPage';
 
+import { AttestorPage } from './AttestorPage';
+import { TranslatePage } from './pages/TranslatePage';
+import { ProjectPage } from './pages/ProjectPage';
 
 const router = createBrowserRouter([
   {
@@ -25,12 +25,16 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "/portal/attestors",
+        path: "attestors",
         element: <AttestorPage />,
       },
       {
-        path: "repositories",
-        element: <RepositoryPage />,
+        path: "translate",
+        element: <TranslatePage />,
+      },
+      {
+        path: "projects/:projectId",
+        element: <ProjectPage />,
       }
     ]
   },
@@ -44,7 +48,7 @@ const router = createBrowserRouter([
 const privyAppId = process.env.REACT_APP_PRIVY_APP_ID || 'clv8gazq204exi1o8ryjhe3xw';
 
 
-const root = ReactDOM.createRoot(
+const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(

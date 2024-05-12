@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { usePrivy, getAccessToken } from '@privy-io/react-auth';
-import Header from './LandingHeader';
-import ProfileCard from './ProfileCard';
+
 import NavBar from './NavBar';
 import RepositoryList from './RepositoryList';
 import DrawerLayout from './DrawerLayout';

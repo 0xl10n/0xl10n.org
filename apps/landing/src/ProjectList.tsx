@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PROJECT_DATA } from "./data/project"
 import { NAME_BY_LOCALE } from "./domain/locale-mapper"
 import { Project } from "./domain/project"
@@ -12,10 +13,10 @@ const ProjectCard = ({ project, isChecked }: { project: Project, isChecked: bool
         <div className="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" defaultChecked={false} />
             <div className="collapse-title">
-                <div className="text-xl! font-medium">
+                <div className="text-xl! font-medium pb-2">
                     {project.title}
                 </div>
-                <div className="text-sm font-medium!">
+                <div className="text-sm font-medium! text-neutral-content">
                     {project.description}
                 </div>
             </div>
@@ -33,6 +34,14 @@ const ProjectCard = ({ project, isChecked }: { project: Project, isChecked: bool
                         )
                     }
                 </div>
+            </div>
+            <div className="p-2">
+                <Link to={`/portal/projects/${project.id}`}>
+                    <button className='btn btn-primary'>
+                        Translate
+                    </button>
+                </Link>
+
             </div>
         </div>
 

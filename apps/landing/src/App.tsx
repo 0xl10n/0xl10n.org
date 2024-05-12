@@ -1,8 +1,10 @@
 import "./App.css";
 import Header from "./LandingHeader";
+import Feature from "./Feature";
 import Footer from "./Footer";
-import VideoCarousel from "./VideoCarousel";
-import videos from "./video.json";
+
+import Workflow from "./Workflow"
+import { VideoSection } from "./sections/VideoList";
 
 
 
@@ -14,34 +16,33 @@ function App() {
         <section className="relative">
           <div className="relative pt-24 lg:pt-28">
             <div className="mx-auto px-6 max-w-7xl md:px-12">
-              <div className="text-center">
-                <VideoCarousel videos={videos} />
-              </div>
+
               <div className="text-center sm:mx-auto sm:w-10/12 lg:mr-auto lg:mt-0 lg:w-4/5">
                 <h1 className="mt-8 text-wrap text-4xl md:text-5xl font-semibold neutral-content">
                   Engage Next billion users of Ethereum <br /> in their
                   languages
-                  <p className="text-wrap mx-auto mt-8 max-w-2xl text-lg text-gray-700 dark:text-gray-300 hidden sm:block">
+                  <p className="text-wrap mx-auto mt-8 max-w-2xl text-lg text-base-content dark:text-gray-300 hidden sm:block">
                     A decentralised translation network with AI &amp; human
                     attestors
                   </p>
                   <div className="mt-8 flex flex-col items-center justify-center gap-4">
-
-                    <button className="btn btn-primary"> <svg
-                      width="30px"
-                      height="30px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
-                        fill="#ffffff"
-                      ></path>
-                    </svg>Get Updates</button>
-                    <button className="hidden *:select-none *:disabled:opacity-20 dark:*:disabled:!text-white dark:hover:bg-gray-500/15 group h-9 items-center justify-center gap-1.5 rounded-[--btn-border-radius] bg-gray-100 px-3 text-base text-gray-800 hover:bg-gray-200/75 active:bg-gray-100 disabled:border disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-950 dark:bg-gray-500/10 dark:text-gray-300 dark:active:bg-gray-500/10 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 [&amp;>*:not(.sr-only)]:relative">
+                    <a href="#subscribe-form">
+                      <button className="btn btn-primary"> <svg
+                        width="30px"
+                        height="30px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                          fill="#ffffff"
+                        ></path>
+                      </svg>Get Updates</button>
+                    </a>
+                    <button className="hidden *:select-none *:disabled:opacity-20 dark:*:disabled:!text-white dark:hover:bg-gray-500/15 group h-9 items-center justify-center gap-1.5 rounded-[--btn-border-radius] bg-gray-100 px-3 text-base text-base-content hover:bg-gray-200/75 active:bg-gray-100 disabled:border disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-950 dark:bg-gray-500/10 dark:text-gray-300 dark:active:bg-gray-500/10 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 [&amp;>*:not(.sr-only)]:relative">
                       <span className="text-sm">Learn more</span>
                       <svg
                         className="-mr-1"
@@ -66,9 +67,12 @@ function App() {
             </div>
           </div>
         </section>
+        <Feature />
+        <Workflow />
+        <VideoSection />
         <section>
           <div className="pt-36">
-            <div className="mx-auto px-6 max-w-6xl text-gray-500">
+            <div className="mx-auto px-6 max-w-6xl text-neutral">
               <div className="relative">
                 <div className="relative z-10 grid gap-3 grid-cols-6">
                   <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-[--card-padding] rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg]">
@@ -81,10 +85,10 @@ function App() {
                         />
                       </div>
                       <div className="mt-14 text-center relative z-10 space-y-2">
-                        <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-secondary-950 dark:text-white">
+                        <h2 className="text-lg font-medium transition group-hover:text-secondary-950 dark:text-white">
                           Engage your community
                         </h2>
-                        <p className="dark:text-gray-300 text-gray-700">
+                        <p className="dark:text-gray-300">
                           Incentive contributions by social recognitions and
                           retroactive funding
                         </p>
@@ -92,7 +96,7 @@ function App() {
                     </div>
                   </div>
                   <div className="col-span-full sm:col-span-3 lg:col-span-2 overflow-hidden relative p-[--card-padding] rounded-[--card-border-radius] bg-white border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color] dark:bg-[--card-dark-bg]">
-                    <div>
+                    <div >
                       <div className="flex pt-6 lg:px-6 content-center justify-center">
                         <img
                           className="object-contain"
@@ -101,10 +105,10 @@ function App() {
                         />
                       </div>
                       <div className="mt-14 text-center relative z-10 space-y-2">
-                        <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-secondary-950 dark:text-white">
+                        <h2 className="text-lg font-medium t transition group-hover:text-secondary-950 dark:text-white">
                           Grow internationally
                         </h2>
-                        <p className="dark:text-gray-300 text-gray-700">
+                        <p className="dark:text-gray-300 ">
                           Time for engaging the non-english speaking world.
                         </p>
                       </div>
@@ -120,10 +124,10 @@ function App() {
                         />
                       </div>
                       <div className="mt-14 text-center relative z-10 space-y-2">
-                        <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-secondary-950 dark:text-white">
+                        <h2 className="text-lg font-medium transition group-hover:text-secondary-950 dark:text-white">
                           Public Goods
                         </h2>
-                        <p className="dark:text-gray-300 text-gray-700">
+                        <p className="dark:text-gray-300">
                           Translation are done on a credibility netural protocol
                         </p>
                       </div>
@@ -134,44 +138,12 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="how-it-works">
-          <div className="pt-36">
-            <div className="mx-auto px-6 max-w-6xl text-gray-500">
-              <div className="text-center">
-                <h2 className="text-3xl text-gray-950 dark:text-white font-semibold">
-                  How it works?
-                </h2>
-                <p className="mt-6 text-gray-700 dark:text-gray-300">
-                  A <b>protocol of reputation</b> system-based cryptoecon
-                  mechanisms <br />
-                  with decentralized toolings and computer power{" "}
-                  <b>enabling community and AI pipelines</b> <br />
-                  to support localization across software and content in the
-                  Ethereum ecosystems
-                </p>
-                <p>
-                  <a href="https://docs.google.com/presentation/d/1xtGcFLisc06wT81VOYeJTgy9Vxp6hP9uyBX7rRj7-64/edit#slide=id.g85cf8b5f36_0_6059">
-                    Check out our latest presentation.
-                  </a>
-                </p>
-              </div>
-              <div className="mt-12 relative h-fit sm:mx-auto sm:px-0 -mx-6 px-6 overflow-x-auto">
-                <div className="flex">
-                  <img
-                    className="object-contain"
-                    src="/assets/explanation.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
         <section>
           <div className="pt-36 pb-36">
             <div className="mx-auto px-6 max-w-6xl text-gray-500">
               <div className="text-center">
-                <h2 className="text-3xl text-gray-950 dark:text-white font-semibold">
+                <h2 className="text-3xl text-content dark:text-white font-semibold">
                   Trusted By the Community
                 </h2>
               </div>

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import themer from "@tailus/themer";
+import daisyui from "daisyui";
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -8,8 +9,8 @@ module.exports = {
   safelist: ["isToggled"],
   theme: {
     fontFamily: {
-      sans: ['Geist', 'Inter', ...defaultTheme.fontFamily.sans],
-      mono: ['GeistMono', 'fira-code', ...defaultTheme.fontFamily.mono],
+      sans: ["Geist", "Inter", ...defaultTheme.fontFamily.sans],
+      mono: ["GeistMono", "fira-code", ...defaultTheme.fontFamily.mono],
     },
     keyframes: {
       loop: {
@@ -18,7 +19,6 @@ module.exports = {
         },
       },
     },
-
   },
   plugins: [
     themer({
@@ -39,15 +39,19 @@ module.exports = {
   ],
   daisyui: {
     themes: [
+      // "emerald",
       {
         night: {
           ...require("daisyui/src/theming/themes")["night"],
-
-          secondary: "#FF9E7A",
+          // primary is #62baf2
           "base-content": "white",
-          "primary": "#345C72"
+          // secondary: "#FF9E7A",
+          // "primary": "#345C72"
+          // "primary": "#497af3",
+          "primary-content": "white"
         },
       },
     ],
+    logs: false,
   },
-}
+};

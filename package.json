@@ -1,6 +1,5 @@
 {
   "name": "0xl10n.org",
-  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@privy-io/react-auth": "^1.63.0",
@@ -18,28 +17,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "format": "prettier --write"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "turbo run build --cache-dir=.turbo",
+    "test": "turbo run test --cache-dir=.turbo",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
@@ -52,8 +34,13 @@
     "eslint-config-react-app": "^7.0.1",
     "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.38",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
-    "tailwindcss": "^3.4.3",
-    "ts-jest": "^29.1.2"
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@9.1.0",
+  "engines": {
+    "node": ">=20"
   }
 }

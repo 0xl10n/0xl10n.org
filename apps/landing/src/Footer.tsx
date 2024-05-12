@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
 
-    <footer className="rounded-xl border border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
+    <footer className="">
       <div className="max-w-6xl mx-auto space-y-16 px-6 py-16 text-gray-600 2xl:px-0">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b pb-8 border-[--ui-light-border-color] dark:border-[--ui-dark-border-color]">
           <a href="/" aria-label="logo">
