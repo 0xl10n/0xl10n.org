@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "craco start",
     "build": "craco build",
-    "postbuild": "react-snap && cp -R ../docs/build build/docs",
+    "postbuild": "cp -R ../docs/build build/docs",
     "test": "craco test",
     "lint": "eslint . --max-warnings 0",
     "format": "prettier --write ."
