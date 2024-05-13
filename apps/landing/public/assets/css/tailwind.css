@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '@fontsource/noto-serif/400-italic.css';
+@import '@fontsource/noto-serif/700-italic.css';
+
+
 @font-face {
     font-family: 'Geist';
     src: url('/fonts/Geist-Bold.otf') format('opentype');

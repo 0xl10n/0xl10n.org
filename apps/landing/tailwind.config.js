@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Geist", "Inter", ...defaultTheme.fontFamily.sans],
+      serif: ["Noto Serif", ...defaultTheme.fontFamily.serif],
       mono: ["GeistMono", "fira-code", ...defaultTheme.fontFamily.mono],
     },
     keyframes: {
@@ -35,6 +36,8 @@ module.exports = {
         },
       },
     }),
+
+    require('@tailwindcss/typography'),
     require("daisyui"),
   ],
   daisyui: {
@@ -42,6 +45,7 @@ module.exports = {
       // "emerald",
       {
         night: {
+
           ...require("daisyui/src/theming/themes")["night"],
           // primary is #62baf2
           "base-content": "white",
