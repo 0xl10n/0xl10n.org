@@ -12,7 +12,7 @@ export const AttestorPage = () => {
     <div className="container">
       <div className="flex content-center items-center">
         <div className="mt-12">
-          <h1>Meet the attestors</h1>
+          <h1 className="text-2xl font-sans">Meet the attestors</h1>
           <div>
             <AttestorList attestors={attestors} />
           </div>

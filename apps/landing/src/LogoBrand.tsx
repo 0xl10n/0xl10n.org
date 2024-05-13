@@ -7,7 +7,10 @@ const LogoBrand = () => {
         </div>
       </div>
       <a href="/" aria-label="logo">
-        Ethereum Localization Service
+        <div className="font-serif text-xl">
+          Ethereum Localization Service
+        </div>
+
       </a>
     </>
   );

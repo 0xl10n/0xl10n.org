@@ -11,7 +11,9 @@ const Menu = () => {
         <Link to={"/portal/attestors"}>Attestors</Link>
       </li>
       <li>
-        <a>Grantsstack</a>
+        <Link to="https://grants.0xl10n.org/" reloadDocument>
+          Grants Stack
+        </Link>
       </li>
     </ul>
   );

@@ -17,7 +17,12 @@ const ProjectCard = ({
     <div className="collapse collapse-arrow bg-base-200">
       <input type="radio" name="my-accordion-2" defaultChecked={false} />
       <div className="collapse-title">
-        <div className="text-xl! pb-2 font-medium">{project.title}</div>
+        <div className="pb-2 font-medium flex flex-row">
+          <h2 className="text-xl">
+            🌐
+            {project.title}
+          </h2>
+        </div>
         <div className="font-medium! text-sm text-neutral-content">
           {project.description}
         </div>

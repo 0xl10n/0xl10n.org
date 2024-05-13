@@ -17,6 +17,8 @@ import { AttestorPage } from "./AttestorPage";
 import { TranslatePage } from "./pages/TranslatePage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { PrivyWrapper } from "./PrivyWrapper";
+import { PROJECT_DATA } from "./data/project";
+import { LoginPage } from "./pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -32,8 +34,13 @@ const router = createBrowserRouter([
         element: <TranslatePage />,
       },
       {
+        path: "login",
+        element: <LoginPage />,
+      },
+      // TODO loader
+      {
         path: "projects/:projectId",
-        element: <ProjectPage />,
+        element: <ProjectPage project={PROJECT_DATA[0]!} />,
       },
     ],
   },

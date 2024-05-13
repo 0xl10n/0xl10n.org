@@ -3,7 +3,7 @@ import { Attestor } from "./domain/attestor";
 
 const AttestorList = ({ attestors }: { attestors: Attestor[] }) => {
   return (
-    <div>
+    <div className="grid grid-cols-3 gap-4">
       {attestors.map((attestor: Attestor) => {
         return <ProfileCard profile={attestor} />;
       })}

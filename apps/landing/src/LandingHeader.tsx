@@ -41,7 +41,7 @@ export default function LandingHeader() {
                     </a>
                   </li> */}
                   <li>
-                    <Link to="/docs/intro" className="justify-between" reloadDocument>
+                    <Link to="/docs/intro" className="dark:hover:text-primary-400 block transition hover:text-primary-600 md:px-4" reloadDocument>
                       Docs
                     </Link>
                   </li>
@@ -67,6 +67,6 @@ export default function LandingHeader() {
           </div>
         </div>
       </nav>
-    </header>
+    </header >
   );
 }

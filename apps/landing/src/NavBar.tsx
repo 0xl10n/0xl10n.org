@@ -9,7 +9,7 @@ const ProfileButton = () => {
 
   // Disable login when Privy is not ready or the user is already authenticated
 
-  const SignUpButton = () => <button className="btn">Log in / Sign Up</button>;
+  const SignUpButton = () => <button className="btn" onClick={() => { login() }}>Log in / Sign Up</button>;
 
   const Avatar = () => (
     <div className="avatar">
@@ -22,6 +22,8 @@ const ProfileButton = () => {
 };
 
 const MenuButton = () => {
+
+
   return (
     <>
       <label htmlFor="my-drawer" className="btn drawer-button">
@@ -45,6 +47,7 @@ const MenuButton = () => {
 };
 
 const NavBar = () => {
+  const { ready, logout } = usePrivy();
   return (
     <div className="navbar bg-base-100 px-10">
       <MenuButton />
@@ -80,7 +83,7 @@ const NavBar = () => {
                         </li>
                         <li><a>Settings</a></li> */}
             <li>
-              <a>Logout</a>
+              <a onClick={() => { ready && logout(); }}>Logout</a>
             </li>
           </ul>
         </div>
