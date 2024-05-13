@@ -78,8 +78,8 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "https://www.0xl10n.org/docs/intro",
+              label: "Docs",
+              to: "/docs/intro"
             },
           ],
         },

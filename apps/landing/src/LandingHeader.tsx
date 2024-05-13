@@ -41,7 +41,7 @@ export default function LandingHeader() {
                     </a>
                   </li> */}
                   <li>
-                    <Link to="/docs/intro" className="justify-between">
+                    <Link to="/docs/intro" className="justify-between" reloadDocument>
                       Docs
                     </Link>
                   </li>
