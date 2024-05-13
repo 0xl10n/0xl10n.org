@@ -79,7 +79,7 @@ const config: Config = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs/intro",
+              to: "https://www.0xl10n.org/docs/intro",
             },
           ],
         },
