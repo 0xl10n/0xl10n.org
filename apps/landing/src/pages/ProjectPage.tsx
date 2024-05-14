@@ -1,9 +1,11 @@
+import { useLoaderData } from "react-router-dom";
 import RepositoryList from "../RepositoryList";
 import { Project } from "../domain/project";
 
-export const ProjectPage = ({ project }: { project: Project }) => {
+export const ProjectPage = () => {
   // TODO loader
 
+  const { project, repos } = useLoaderData() as any;
   const { title, description } = project
 
   return (
@@ -12,7 +14,7 @@ export const ProjectPage = ({ project }: { project: Project }) => {
         <h2 className="text-4xl flex flex-row justify-center items-center pb-4">
           🌐{title}
         </h2></div>
-      <div>
+      <div className="mx-auto text-neutral-content max-w-4xl">
         {description}
       </div>
       <div className="mt-12">
@@ -22,7 +24,7 @@ export const ProjectPage = ({ project }: { project: Project }) => {
         <div>{/* <Profile /> */}</div>
 
         <div>
-          <RepositoryList />
+          <RepositoryList repos={repos} />
         </div>
       </div>
     </div>

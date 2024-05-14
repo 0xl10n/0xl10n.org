@@ -10,9 +10,7 @@ function Portal() {
     <DrawerLayout menu={<Menu />}>
       <div>
         <NavBar />
-        <div className="container mx-auto min-h-[80vh]">
-          <Outlet />
-        </div>
+        <Outlet />
         <Footer />
       </div>
     </DrawerLayout>

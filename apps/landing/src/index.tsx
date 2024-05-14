@@ -19,6 +19,11 @@ import { ProjectPage } from "./pages/ProjectPage";
 import { PrivyWrapper } from "./PrivyWrapper";
 import { PROJECT_DATA } from "./data/project";
 import { LoginPage } from "./pages/LoginPage";
+import { Repository } from "./domain/repository";
+import { REPO_DATA } from "./data/repo";
+import { Project } from "./domain/project";
+import { RepositoryPage } from "./pages/RepositoryPage";
+import { ProjectLayout, TranslateLayout } from "./Layout";
 
 const router = createBrowserRouter([
   {
@@ -27,20 +32,37 @@ const router = createBrowserRouter([
     children: [
       {
         path: "attestors",
-        element: <AttestorPage />,
+        element: <ProjectLayout><AttestorPage /></ProjectLayout>,
       },
       {
         path: "translate",
-        element: <TranslatePage />,
+        element: <ProjectLayout><TranslatePage /></ProjectLayout>,
       },
       {
         path: "login",
-        element: <LoginPage />,
+        element: <ProjectLayout><TranslatePage /></ProjectLayout>,
+
       },
-      // TODO loader
       {
         path: "projects/:projectId",
-        element: <ProjectPage project={PROJECT_DATA[0]!} />,
+        element: <ProjectLayout><ProjectPage /></ProjectLayout>,
+        loader: ({ params }: { params: any }) => {
+          console.log('params', params)
+          return {
+            project: PROJECT_DATA.find((project: Project) => project.id === params.projectId),
+            repos: REPO_DATA.filter((repo: Repository) => repo.projectId === params.projectId),
+          };
+        }
+      },
+      {
+        path: "repositories/:repoId",
+        element: <TranslateLayout><RepositoryPage /></TranslateLayout>,
+        loader: ({ params }: { params: any }) => {
+          console.log('params', params)
+          return {
+            repository: REPO_DATA.find((repo: Repository) => repo.id === params.repoId),
+          };
+        }
       },
     ],
   },
