@@ -55,4 +55,9 @@ export const ATTESTORS_DATA = [
   },
 
   
-] as Attestor[];
+].map((attestor)=>{
+  return {
+  ...attestor,
+  profileUrl: attestor.profileUrl || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+  }
+}) as Attestor[];
