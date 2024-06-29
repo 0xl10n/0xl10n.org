@@ -1,6 +1,30 @@
 import { Link } from "react-router-dom";
 import LogoBrand from "./LogoBrand";
 import { usePrivy } from "@privy-io/react-auth";
+import { Address, Avatar, Badge, Identity, Name } from "@coinbase/onchainkit/identity";
+
+
+
+
+const UserButton = ({ address, schemaId }: { address: string, schemaId: string }) => (
+  <div className="avatar">
+    <Identity
+      address="0x838aD0EAE54F99F1926dA7C3b6bFbF617389B4D9"
+      schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
+    >
+      <Avatar>
+        <Badge />
+      </Avatar>
+      <Name />
+      <Address />
+    </Identity>
+
+  </div>
+);
+
+
+
+
 
 const ProfileButton = () => {
   const { ready, authenticated, login, user } = usePrivy();
@@ -11,14 +35,10 @@ const ProfileButton = () => {
 
   const SignUpButton = () => <button className="btn" onClick={() => { login() }}>Log in / Sign Up</button>;
 
-  const Avatar = () => (
-    <div className="avatar">
-      <div className="w-8 rounded-full">
-        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-      </div>
-    </div>
-  );
-  return isUserReady ? <Avatar /> : <SignUpButton />;
+  console.log('user', user);
+  return isUserReady ? <UserButton address="0x838aD0EAE54F99F1926dA7C3b6bFbF617389B4D9"
+    schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
+  /> : <SignUpButton />;
 };
 
 const MenuButton = () => {

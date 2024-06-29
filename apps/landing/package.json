@@ -10,7 +10,10 @@
     "lint": "eslint . --max-warnings 0",
     "format": "prettier --write ."
   },
+  "type": "module",
   "dependencies": {
+    "@coinbase/onchainkit": "^0.23.4",
+    "@coinbase/wallet-sdk": "^4.0.4",
     "@fontsource/noto-serif": "^5.0.20",
     "@repo/docs": "workspace:*",
     "@tailus/themer": "^0.0.5",
@@ -25,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
+    "viem": "2.16.4",
     "web-vitals": "^2.1.4"
   },
   "eslintConfig": {

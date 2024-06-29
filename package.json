@@ -2,7 +2,7 @@
   "name": "0xl10n.org",
   "private": true,
   "dependencies": {
-    "@privy-io/react-auth": "^1.63.0",
+    "@privy-io/react-auth": "^1.73.0",
     "@tailus/themer": "^0.0.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
